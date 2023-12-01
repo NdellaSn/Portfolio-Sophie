@@ -18,6 +18,10 @@
 </head>
 
 <body>
+	<div class="modal modal-edition">
+		<div class="modal-content"><i class="fa-regular fa-pen-to-square"></i>Mode Edition</div>
+	</div>
+
 	<header>
 		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 		<nav>
@@ -81,12 +85,13 @@
 	</footer>
 
 
-	<div class="modal">
+	<div class="modal modal-works close-btn">
 		<div class="modal-content modal-content-photos">
 			<div class="modal-header">
-				<button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+				<button class="close-btn"><i class="close-btn fa-solid fa-xmark"></i></button>
 			</div>
 			<div class="modal-body">
+				<div class="erreur-message">Une Erreure s'est produite.</div>
 				<h3>Galerie photo </h3>
 				<div class="photos">
 
@@ -101,30 +106,30 @@
 		<div class="modal-content modal-content-ajout">
 			<div class="modal-header">
 				<button class="back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-				<button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+				<button class="close-btn"><i class="close-btn fa-solid fa-xmark"></i></button>
 			</div>
 			<form id="form-new-work">
-
+				<div class="erreur-message">Une Erreure s'est produite.</div>
 				<div class="modal-body">
 					<h3>Ajout photo </h3>
 					<div class="">
 						<div class="form-input file-add" id="get-photo">
 							<i class="fa-regular fa-image"></i>
-							<button type="button" class="btn" >
+							<button type="button" class="btn">
 								<i class="fa-solid fa-plus"></i>
 								Ajouter photo
 							</button>
 							<p>jpg, png : 4mo max</p>
-							<input type="file" accept="image/png, image/jpeg">
-
 						</div>
+						<input type="file" name="image" accept="image/png, image/jpeg">
+
 						<div class="form-input">
 							<label for="title">Titre</label>
-							<input type="text" id="title" required>
+							<input type="text" id="title" name="title" required>
 						</div>
 						<div class="form-input">
 							<label for="categorie">Catégorie</label>
-							<select name="" id="categorie" required>
+							<select name="category" id="categorie" required>
 							</select>
 						</div>
 
